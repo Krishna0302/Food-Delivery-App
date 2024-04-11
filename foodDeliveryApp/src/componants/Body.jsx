@@ -3,13 +3,9 @@ import RestaurantCard from "./RestaurantCard.jsx";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmer.jsx";
 import { apiURL } from "../constants.jsx";
-
-function filterData(searchText, restaurants) {
-  const resFilterData = restaurants.filter((restaurant) =>
-    restaurant?.info?.name.toLowerCase().includes(searchText.toLowerCase())
-  );
-  return resFilterData;
-}
+import { filterData } from "../../utils/helper.jsx";
+import useOnline from "../../utils/useOnline.jsx";
+import UserOffline from "./userOffline.jsx";
 
 // Body Component for body section: It contain all restaurant cards
 const Body = () => {
@@ -55,6 +51,11 @@ const Body = () => {
       console.log(error);
     }
   }
+
+  const offline = useOnline();
+    if(!offline){
+        return <UserOffline/>
+      }
 
   // use searchData function and set condition if data is empty show error message
   const searchData = (searchText, restaurants) => {

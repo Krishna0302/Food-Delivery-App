@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
     return (
-      <div className="header">
-      <img className='logo' 
+      <div className="flex">
+      <img className='h-8' 
         src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO5RX6tM4fUGQ9H6WE-PQvxP6uMH5ceHraWM9aDyiaW4jnwAOyI9gBuuYG4fmgv_Qf7uo&usqp=CAU'
         alt='logo'
       />

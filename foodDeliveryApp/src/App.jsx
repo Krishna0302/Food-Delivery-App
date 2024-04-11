@@ -9,7 +9,6 @@ import Error from './componants/Error.jsx'
 import ContactUs from './componants/ContactUs.jsx'
 import RestaurantMenu from './componants/RestaurantMenu.jsx'
 import Profile from './componants/ProfileClass.jsx'
-import ClassProfile from './componants/Profile.jsx'
 import './index.css'
 
 

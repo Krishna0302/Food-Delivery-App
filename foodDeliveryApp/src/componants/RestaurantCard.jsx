@@ -1,3 +1,5 @@
+import { IMG_CDN_URL } from "../constants.jsx";
+
 // Restaurant card component: Image, name, cuisine
 const RestaurantCard = ({
     cloudinaryImageId,
@@ -12,8 +14,7 @@ const RestaurantCard = ({
       <div className="card">
         <img
           src={
-            "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/" +
-            cloudinaryImageId
+            IMG_CDN_URL + cloudinaryImageId
           }
         />
         <h2>{name}</h2>
